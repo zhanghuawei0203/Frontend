@@ -40,6 +40,16 @@
 						image: 'https://picsum.photos/200', // 实际使用请替换为真实图片地址
 						info: '可乐x1，农夫山泉x2',
 					},
+					{
+						name: '商品1',
+						image: 'https://picsum.photos/200', // 实际使用请替换为真实图片地址
+						info: '可乐x1，农夫山泉x2',
+					},
+					{
+						name: '商品1',
+						image: 'https://picsum.photos/200', // 实际使用请替换为真实图片地址
+						info: '可乐x1，农夫山泉x2',
+					},
 				]
 			};
 		},
