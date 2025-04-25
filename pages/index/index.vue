@@ -28,13 +28,11 @@
        
 		
 		<view class="image-result-container">
-            <view class="box-title">待检测图片</view>
-            <!-- 待检测图片区域 -->
+            <view class="box-title">还没检测的图片</view>
             <view class="image-box">
                 <image v-if="selectedImage" :src="selectedImage" mode="aspectFit" class="image"></image>
             </view>
-            <!-- 检测后图片区域 -->
-			<view class="box-title">检测后图片</view>
+			<view class="box-title">使用yolo算法检测后图片</view>
             <view class="image-box">
 
                 <image v-if="resultImage" :src="resultImage" mode="aspectFit" class="image"></image>
