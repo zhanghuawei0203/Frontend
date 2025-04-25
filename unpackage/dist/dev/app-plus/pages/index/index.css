@@ -1,0 +1,21 @@
+
+.container[data-v-1cf27b2a] {
+		padding: 20px;
+}
+.title[data-v-1cf27b2a] {
+		font-size: 24px;
+		margin-bottom: 20px;
+}
+.upload-section[data-v-1cf27b2a] {
+		margin-bottom: 20px;
+		display: flex;
+		justify-content: space-around;
+}
+.image-section[data-v-1cf27b2a] {
+		display: flex;
+		justify-content: space-around;
+}
+.original-image[data-v-1cf27b2a],
+	.result-image[data-v-1cf27b2a] {
+		width: 48%;
+}
