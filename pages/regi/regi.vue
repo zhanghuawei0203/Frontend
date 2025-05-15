@@ -2,7 +2,7 @@
 	<view class="container">
 		<view class="body">
 			<view class="header">
-				<text class="greeting">你好</text>
+				<text class="greeting">注册</text>
 				<text class="welcome">欢迎加入我们</text>
 			</view>
 			<view class="form-container">
@@ -36,7 +36,16 @@
 		},
 		methods: {
 			registerAndLogin() {
-				// 这里简单校验密码是否一致，实际项目中需更完善的校验
+				// 检查是否有未填写的字段
+				if (!this.username || !this.password || !this.confirmPassword) {
+					uni.showToast({
+						title: '请填写注册信息',
+						icon: 'none'
+					});
+					return;
+				}
+
+				// 校验两次密码是否一致
 				if (this.password !== this.confirmPassword) {
 					uni.showToast({
 						title: '两次输入密码不一致',
@@ -44,6 +53,20 @@
 					});
 					return;
 				}
+
+				// 模拟注册成功（实际项目中应调用后端API）
+				uni.showToast({
+					title: '注册成功',
+					icon: 'success',
+					duration: 2000
+				});
+
+				// 注册成功后跳转到登录页面
+				setTimeout(() => {
+					uni.navigateTo({
+						url: '/pages/login/login'
+					});
+				}, 2000);
 				// 此处应添加向服务器发送注册和登录请求的逻辑
 				// 示例：
 				// uni.request({
@@ -90,10 +113,12 @@
 		display: flex;
 		flex-direction: column;
 	}
-	.body{
+
+	.body {
 		padding: 20px;
 		margin-top: 150px;
 	}
+
 	.header {
 		text-align: left;
 		margin-bottom: 40px;

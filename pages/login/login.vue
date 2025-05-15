@@ -13,7 +13,7 @@
 					<input type="password" placeholder="密码" v-model="password" />
 				</view>
 			</view>
-			<button class="login-btn" @click="Login">登录</button>
+			<button class="login-btn" @click="login">登录</button>
 			<view class="link-container">
 				<text>没有账号？</text>
 				<navigator url="/pages/regi/regi" class="login-link">去注册</navigator>
@@ -26,52 +26,31 @@
 	export default {
 		data() {
 			return {
-				username: '',
-				password: '',
+				username: 'user',
+				password: '123456',
 			};
 		},
 		methods: {
-			Login() {
-				uni.switchTab({
-					url: '/pages/index/index'
-				});
-				// 这里简单校验密码是否一致，实际项目中需更完善的校验
-				// if (this.password !== this.confirmPassword) {
-				// 	uni.showToast({
-				// 		title: '两次输入密码不一致',
-				// 		icon: 'none'
-				// 	});
-				// 	return;
-				// }
-				// 此处应添加向服务器发送注册和登录请求的逻辑
-				// 示例：
-				// uni.request({
-				//   url: 'your-api-url',
-				//   method: 'POST',
-				//   data: {
-				//     username: this.username,
-				//     password: this.password
-				//   },
-				//   success: (res) => {
-				//     if (res.statusCode === 200) {
-				//       uni.showToast({
-				//         title: '注册登录成功',
-				//         icon:'success'
-				//       });
-				//     } else {
-				//       uni.showToast({
-				//         title: '注册登录失败',
-				//         icon: 'none'
-				//       });
-				//     }
-				//   },
-				//   fail: (err) => {
-				//     uni.showToast({
-				//       title: '网络错误',
-				//       icon: 'none'
-				//     });
-				//   }
-				// });
+			login() {
+				// 校验用户名和密码
+				if ((this.username === 'user' || this.username === 'admin') && this.password === '123456') {
+					uni.showToast({
+						title: '登录成功',
+						icon: 'success',
+					});
+					setTimeout(() => {
+						uni.switchTab({
+							url: '/pages/index/index'
+						});
+					}, 1000);
+					// 验证通过，跳转到首页
+				} else {
+					// 验证失败，显示错误提示
+					uni.showToast({
+						title: '用户名或密码错误',
+						icon: 'none'
+					});
+				}
 			}
 		}
 	};

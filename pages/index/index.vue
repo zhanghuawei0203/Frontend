@@ -4,7 +4,7 @@
 			<view class="title">商品价格识别</view>
 			<view class="detect-button-container">
 				<button @click="detectImage" :disabled="isDetecting" class="detect-button common-button">
-					<uniIcons :type="isDetecting ? 'spinner-cycle' : 'search'" size="20"></uniIcons>
+					<uniIcons :type="isDetecting ? 'spinner-cycle' : 'search'" size="20" color="white"></uniIcons>
 					{{ isDetecting ? '检测中...' : '检测' }}
 				</button>
 			</view>
@@ -28,7 +28,7 @@
        
 		
 		<view class="image-result-container">
-            <view class="box-title">还没检测的图片</view>
+            <view class="box-title">待检测的图片</view>
             <view class="image-box">
                 <image v-if="selectedImage" :src="selectedImage" mode="aspectFit" class="image"></image>
             </view>
@@ -161,7 +161,7 @@
 	.detect-button-container {
 	    position: absolute; /* 绝对定位 */
 	    top: 50%; /* 垂直居中 */
-	    right: 0; /* 定位到右侧 */
+	    /* 定位到右侧 */
 	    transform: translateY(-50%); /* 微调垂直位置 */
 	}
     .square-button {
@@ -190,8 +190,8 @@
 	}
 	.detect-button {
 		background-color: #EB8750; /* 黄色 */
-		color: black;
-		width: 150px; 
+		color: white;
+		width: 300px; 
 		height: 50px;
 		border: none;
 		border-radius: 4px;
