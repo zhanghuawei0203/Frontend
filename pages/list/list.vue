@@ -31,24 +31,24 @@
 						info: '可乐x1，农夫山泉x2',
 					},
 					{
-						name: '商品1',
+						name: '商品2',
 						image: 'https://picsum.photos/200', // 实际使用请替换为真实图片地址
 						info: '雪碧x1，怡宝x2',
 					},
 					{
-						name: '商品1',
+						name: '商品3',
 						image: 'https://picsum.photos/200', // 实际使用请替换为真实图片地址
-						info: '可乐x1，农夫山泉x2',
+						info: '水溶Cx1，冰露x2',
 					},
 					{
-						name: '商品1',
+						name: '商品4',
 						image: 'https://picsum.photos/200', // 实际使用请替换为真实图片地址
-						info: '可乐x1，农夫山泉x2',
+						info: '阿萨姆x1，绿茶x2',
 					},
 					{
-						name: '商品1',
+						name: '商品5',
 						image: 'https://picsum.photos/200', // 实际使用请替换为真实图片地址
-						info: '可乐x1，农夫山泉x2',
+						info: '可乐x1，瓜子x1',
 					},
 				]
 			};

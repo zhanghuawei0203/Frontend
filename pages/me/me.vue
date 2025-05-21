@@ -10,24 +10,24 @@
 			<view class="function-list">
 				<view class="function-item" @click="goToMessageCenter">
 					<image class="icon" src="/static/logo.png" mode="aspectFit"></image>
-					<text class="text">信息中心</text>
+					<text class="text">特权查询</text>
 					<image class="arrow-icon" src="/static/irow.png" mode="aspectFit"></image>
 				</view>
 				<view class="function-item" @click="goToMessageCenter">
 					<image class="icon" src="/static/logo.png" mode="aspectFit"></image>
-					<text class="text">信息中心</text>
+					<text class="text">信息修改</text>
 					<image class="arrow-icon" src="/static/irow.png" mode="aspectFit"></image>
 				</view>
 				<view class="function-item" @click="goToMessageCenter">
 					<image class="icon" src="/static/logo.png" mode="aspectFit"></image>
-					<text class="text">信息中心</text>
+					<text class="text">系统设置</text>
 					<image class="arrow-icon" src="/static/irow.png" mode="aspectFit"></image>
 				</view>
 			</view>
 		</view>
 		<!-- 退出登录按钮区域 -->
 		<view class="logout-button">
-			<button class="logout-btn" @click="logout">退出登陆</button>
+			<button class="logout-btn" @click="logout">退出登录</button>
 		</view>
 	</view>
 </template>
@@ -37,7 +37,7 @@
 		data() {
 			return {
 				avatarUrl: '/static/logo.png', // 实际使用时需替换为真实头像地址
-				username: '一个用户',
+				username: 'user',
 			};
 		},
 		methods: {

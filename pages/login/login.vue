@@ -26,14 +26,14 @@
 	export default {
 		data() {
 			return {
-				username: 'user',
+				username: 'user1',
 				password: '123456',
 			};
 		},
 		methods: {
 			login() {
 				// 校验用户名和密码
-				if ((this.username === 'user' || this.username === 'admin') && this.password === '123456') {
+				if ((this.username === 'user1' || this.username === 'admin') && this.password === '123456') {
 					uni.showToast({
 						title: '登录成功',
 						icon: 'success',
