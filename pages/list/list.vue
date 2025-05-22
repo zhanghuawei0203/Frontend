@@ -5,12 +5,16 @@
 				<image class="product-img" :src="product.image" mode="aspectFill"></image>
 				<view class="product-info">
 					<text class="product-name">{{ product.name }}</text>
-					<view class="detail">
+					<!-- <view class="detail">
 						<text class="detail-label">识别结果</text>
-					</view>
+					</view> -->
 					<view class="detail">
-						<text class="detail-value">{{ product.info }}</text>
+						<text class="detail-info">{{ product.info }}</text>
+						<text class="detail-time">{{ product.time }}</text>
 					</view>
+					<!-- <view class="detail">
+						<text class="detail-value">{{ product.time }}</text>
+					</view> -->
 					<!-- <text class="description">{{ product.description }}</text> -->
 					<!-- <text class="description">{{ product.description }}</text> -->
 					<!-- <text class="description">{{ product.description }}</text> -->
@@ -27,28 +31,34 @@
 				searchText: '',
 				productList: [{
 						name: '商品1',
-						image: 'https://picsum.photos/200', // 实际使用请替换为真实图片地址
+						image: '/static/img/1.png', // 实际使用请替换为真实图片地址
 						info: '可乐x1，农夫山泉x2',
+						time: '2025-04-01 21:09:32'
+
 					},
 					{
 						name: '商品2',
-						image: 'https://picsum.photos/200', // 实际使用请替换为真实图片地址
+						image: '/static/img/2.png', // 实际使用请替换为真实图片地址
 						info: '雪碧x1，怡宝x2',
+						time: '2025-04-01 21:10:42'
 					},
 					{
 						name: '商品3',
-						image: 'https://picsum.photos/200', // 实际使用请替换为真实图片地址
+						image: '/static/img/3.png', // 实际使用请替换为真实图片地址
 						info: '水溶Cx1，冰露x2',
+						time: '2025-04-01 21:11:11'
 					},
 					{
 						name: '商品4',
-						image: 'https://picsum.photos/200', // 实际使用请替换为真实图片地址
+						image: '/static/img/4.png', // 实际使用请替换为真实图片地址
 						info: '阿萨姆x1，绿茶x2',
+						time: '2025-04-01 21:12:42'
 					},
 					{
 						name: '商品5',
-						image: 'https://picsum.photos/200', // 实际使用请替换为真实图片地址
-						info: '可乐x1，瓜子x1',
+						image: '/static/img/1.png', // 实际使用请替换为真实图片地址
+						info: '可乐x1，瓜子x1，阿萨姆x1，绿茶x2',
+						time: '2025-04-01 21:15:45'
 					},
 				]
 			};
@@ -66,11 +76,12 @@
 
 <style>
 	page {
-		background-color: #f9f9f9;
+		background-color: #f8f8f8;
 	}
+
 	.container {
-		background-color: #f9f9f9;
-		padding: 20px;
+		background-color: #f8f8f8;
+		padding: 15px;
 	}
 
 	.product-list {
@@ -85,48 +96,56 @@
 		border-radius: 5px;
 		width: 100%;
 		height: 150px;
+		 
 	}
 
 	.product-img {
-		width: 100px;
-		height: 100px;
+		width: 110px;
+		height: 110px;
 		margin: auto;
-		/* object-fit: cover; */
-		border-radius: 5px 0 0 5px;
+		border-radius: 5px;
+		padding: 15px;
 	}
 
 	.product-info {
 		margin: auto;
 		width: 50%;
 		padding: 15px;
-		
+		margin-top: 15px;
 	}
 
 	.product-name {
 		font-size: 20px;
-		margin-bottom: 10px;
+		font-weight: bold;
+		/* margin-bottom: 20px; */
 	}
 
 	.detail {
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 5px;
+	  position: relative; /* 为时间定位提供基准 */
+	  height: 80px; /* 固定容器高度，根据内容调整 */
+	  overflow: hidden; /* 隐藏溢出内容 */
 	}
-
-	.detail-label {
-		font-size: 14px;
-		color: #333;
-		margin-right: 15px;
+	
+	.detail-info {
+		margin-top: 10px;
+	  font-size: 16px;
+	  color: #333;
+	  display: -webkit-box;
+	  -webkit-box-orient: vertical;
+	  -webkit-line-clamp: 1; /* 限制显示两行 */
+	  overflow: hidden;
+	  
 	}
-
-	.detail-value {
-		font-size: 14px;
-		color: #333;
+	
+	.detail-time {
+	  
+	  bottom: 0;
+	  left: 0;
+	  font-size: 14px; /* 缩小字体避免拥挤 */
+	  color: #666;
 	}
-
 	.description {
 		font-size: 14px;
-		line-height: 1.4;
 		color: #666;
 	}
 </style>

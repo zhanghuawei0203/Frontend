@@ -58,8 +58,16 @@
 
 <style>
 	page {
-		background-color: #ffffff;
+		/* background-color: #ffffff; */
 		height: 100%;
+		background-color: #f8f8f8;
+		/* 本地图片（推荐将图片放在static目录下） */
+		background-image: url('/static/bc.jpg'); 
+		/* 网络图片 */
+		/* background-image: url('https://example.com/bg.jpg'); */
+		background-size: cover; /* 背景图覆盖整个容器 */
+		background-repeat: no-repeat; /* 禁止重复 */
+		background-attachment: fixed; /* 背景图固定（可选） */
 	}
 
 	.container {
@@ -67,16 +75,19 @@
 		height: 100%;
 		display: flex;
 		flex-direction: column;
+		
 	}
 
 	.body {
+		background-color: #ffffff;
 		padding: 20px;
-		margin-top: 150px;
+		margin:auto 40px;
+		border-radius: 10px;
 	}
 
 	.header {
 		text-align: left;
-		margin-bottom: 40px;
+		margin-bottom: 15px;
 		display: flex;
 		flex-direction: column;
 	}
@@ -104,7 +115,7 @@
 
 	.form-item input {
 		width: 94%;
-		padding: 10px;
+		padding: 5px;
 		border: none;
 		border-bottom: 1px solid #ccc;
 		font-size: 16px;
@@ -112,7 +123,6 @@
 
 	.login-btn {
 		width: 100%;
-		padding: 10px;
 		background-color: #f58402;
 		color: white;
 		border: none;

@@ -8,27 +8,27 @@
 		<view class="bottom">
 			<!-- 功能列表区域 -->
 			<view class="function-list">
-				<view class="function-item" @click="goToMessageCenter">
-					<image class="icon" src="/static/logo.png" mode="aspectFit"></image>
+				<view class="function-item" @click="goToCX">
+					<image class="icon" src="/static/cx.png" mode="aspectFit"></image>
 					<text class="text">特权查询</text>
 					<image class="arrow-icon" src="/static/irow.png" mode="aspectFit"></image>
 				</view>
-				<view class="function-item" @click="goToMessageCenter">
-					<image class="icon" src="/static/logo.png" mode="aspectFit"></image>
+				<view class="function-item" @click="goToXG">
+					<image class="icon" src="/static/edit.png" mode="aspectFit"></image>
 					<text class="text">信息修改</text>
 					<image class="arrow-icon" src="/static/irow.png" mode="aspectFit"></image>
 				</view>
-				<view class="function-item" @click="goToMessageCenter">
-					<image class="icon" src="/static/logo.png" mode="aspectFit"></image>
+				<view class="function-item" @click="goToSZ">
+					<image class="icon" src="/static/set.png" mode="aspectFit"></image>
 					<text class="text">系统设置</text>
 					<image class="arrow-icon" src="/static/irow.png" mode="aspectFit"></image>
 				</view>
 			</view>
 		</view>
 		<!-- 退出登录按钮区域 -->
-		<view class="logout-button">
+	<!-- 	<view class="logout-button">
 			<button class="logout-btn" @click="logout">退出登录</button>
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -36,8 +36,8 @@
 	export default {
 		data() {
 			return {
-				avatarUrl: '/static/logo.png', // 实际使用时需替换为真实头像地址
-				username: 'user',
+				avatarUrl: '/static/head.png', // 实际使用时需替换为真实头像地址
+				username: '超市小达人',
 			};
 		},
 		methods: {
@@ -56,8 +56,20 @@
 					}
 				});
 			},
-			goToMessageCenter() {
-
+			goToCX() {
+				uni.navigateTo({
+					url: '/pages/cx/cx'
+				});
+			},
+			goToXG() {
+				uni.navigateTo({
+					url: '/pages/xg/xg'
+				});
+			},
+			goToSZ() {
+				uni.navigateTo({
+					url: '/pages/sz/sz'
+				});
 			}
 		}
 	};
@@ -97,13 +109,15 @@
 		width: 80px;
 		height: 80px;
 		border-radius: 50%;
-		margin-right: 10px;
+		/* margin-right: 10px; */
 	}
 
 	.username {
-		font-size: 18px;
+		font-size: 40rpx;
 		color: white;
 		margin-top: 10px;
+		font-weight: bold;
+		/* margin-right: 10px; */
 	}
 
 	.bottom {
@@ -113,8 +127,8 @@
 	}
 
 	.function-list {
-		margin: 20px;
-		padding: 10px;
+		margin-top: 35px;
+		/* padding: 10px; */
 		background-color: white;
 	}
 
@@ -122,14 +136,14 @@
 		height: 30px;
 		display: flex;
 		align-items: center;
-		padding: 15px 0;
-		border-bottom: 2px solid #e0e0e0;
+		padding:25px 0;
+		border-bottom: 2px solid #eee;
 	}
 
 	.icon {
-		width: 25px;
-		height: 25px;
-		margin: 0 20px 0 10px;
+		width: 80rpx;
+		height: 80rpx;
+		margin: 0 20px 0 20px;
 	}
 
 	.text {
@@ -140,7 +154,7 @@
 	.arrow-icon {
 		width: 25px;
 		height: 25px;
-		margin: 0 0 0 10px;
+		margin-right:20px;
 	}
 
 	.logout-button {

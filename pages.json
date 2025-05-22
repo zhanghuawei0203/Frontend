@@ -35,6 +35,30 @@
 				"navigationBarTitleText" : "注册",
 				"enablePullDownRefresh" : false
 			}
+		},
+		{
+			"path" : "pages/cx/cx",
+			"style" : 
+			{
+				"navigationBarTitleText" : "特权查询",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/xg/xg",
+			"style" : 
+			{
+				"navigationBarTitleText" : "信息修改",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/sz/sz",
+			"style" : 
+			{
+				"navigationBarTitleText" : "系统设置",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
 	"globalStyle": {
