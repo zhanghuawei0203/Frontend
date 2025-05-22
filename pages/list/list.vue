@@ -31,33 +31,33 @@
 				searchText: '',
 				productList: [{
 						name: '商品1',
-						image: '/static/img/1.png', // 实际使用请替换为真实图片地址
-						info: '可乐x1，农夫山泉x2',
+						image: '/static/img/11.jpg', // 实际使用请替换为真实图片地址
+						info: '百事可乐330mlx2，mini奥利奥55gx1，合味道海鲜风味84gx2',
 						time: '2025-04-01 21:09:32'
 
 					},
 					{
 						name: '商品2',
-						image: '/static/img/2.png', // 实际使用请替换为真实图片地址
-						info: '雪碧x1，怡宝x2',
+						image: '/static/img/22.jpg', // 实际使用请替换为真实图片地址
+						info: '洽洽凉茶瓜子150gx1，高露洁冰爽180gx3，银鹭莲子玉米粥280gx1',
 						time: '2025-04-01 21:10:42'
 					},
 					{
 						name: '商品3',
-						image: '/static/img/3.png', // 实际使用请替换为真实图片地址
-						info: '水溶Cx1，冰露x2',
+						image: '/static/img/33.jpg', // 实际使用请替换为真实图片地址
+						info: '芬达橙味500mlx3，嘉顿威化饼干柠檬味50gx3，QQ星均膳奶125mlx2',
 						time: '2025-04-01 21:11:11'
 					},
 					{
 						name: '商品4',
-						image: '/static/img/4.png', // 实际使用请替换为真实图片地址
-						info: '阿萨姆x1，绿茶x2',
+						image: '/static/img/44.jpg', // 实际使用请替换为真实图片地址
+						info: '菜园小饼80gx2，上好佳洋葱圈40gx2，QQ星均膳奶125mlx1',
 						time: '2025-04-01 21:12:42'
 					},
 					{
 						name: '商品5',
-						image: '/static/img/1.png', // 实际使用请替换为真实图片地址
-						info: '可乐x1，瓜子x1，阿萨姆x1，绿茶x2',
+						image: '/static/img/55.jpg', // 实际使用请替换为真实图片地址
+						info: '维达立体美110x1',
 						time: '2025-04-01 21:15:45'
 					},
 				]

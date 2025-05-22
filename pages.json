@@ -9,7 +9,7 @@
 		{
 			"path": "pages/list/list",
 			"style": {
-				"navigationBarTitleText": "列表",
+				"navigationBarTitleText": "历史检测",
 				"enablePullDownRefresh": false
 			}
 		},
